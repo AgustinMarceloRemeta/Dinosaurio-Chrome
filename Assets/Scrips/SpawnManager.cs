@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] Transform[] Spawns;
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject enemy1,enemy2;
     [SerializeField] float SpeedSpawn;
     public float SpeedEnemy, SpeedUp;
     void Start()
@@ -21,6 +21,9 @@ public class SpawnManager : MonoBehaviour
     void SpawnEnemy()
     {
         int random = Random.Range(0, 2);
-        Instantiate(enemy, Spawns[random].position, Quaternion.identity);
+        if(random == 0)
+        Instantiate(enemy1, Spawns[random].position, Quaternion.identity);
+        else
+        Instantiate(enemy2, Spawns[random].position, Quaternion.identity);
     }
 }
