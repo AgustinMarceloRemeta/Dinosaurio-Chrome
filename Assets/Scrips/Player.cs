@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float Speed;
+    public float Speed;
     Rigidbody2D rb;
-     bool Jump;
+    public bool Jump;
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -14,11 +14,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Jump) movement();
+        if (Input.GetAxis("Vertical") > 0.1 || Input.GetKey("space")) movement();
     }
-    void movement()
+    public void movement()
     {
-        if(Input.GetAxis("Vertical") > 0.1 || Input.GetKey("space")) {
+        if(Jump) {
         rb.AddForce(Vector2.up * Speed,ForceMode2D.Impulse);
         Jump = false;
         }

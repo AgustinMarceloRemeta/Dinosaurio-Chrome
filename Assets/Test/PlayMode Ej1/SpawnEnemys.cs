@@ -7,7 +7,7 @@ using UnityEngine.TestTools;
 public class SpawnEnemys
 {
     [UnityTest]
-    public IEnumerator SpawnEnemysWithEnumeratorPasses()
+    public IEnumerator SpawnRandomEnemys()
     {
       
         GameObject spawner = new GameObject { };
@@ -21,6 +21,7 @@ public class SpawnEnemys
         spm.enemy1.tag = "Enemy";
         spm.enemy2.tag = "Enemy";
         spm.SpeedSpawn = 1000;
+        spm.SpeedUp = 0;
       
         int random = Random.Range(1, 6);
         for (int i = 0; i < random; i++) spm.SpawnEnemy();

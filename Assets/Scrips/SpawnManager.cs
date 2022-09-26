@@ -10,13 +10,16 @@ public class SpawnManager : MonoBehaviour
     public float SpeedEnemy, SpeedUp;
     void Start()
     {
+        List<GameObject> Enemys = new List<GameObject>(Resources.LoadAll<GameObject>("Enemy"));
+        enemy1 = Enemys[0];
+        enemy2 = Enemys[1];
         InvokeRepeating("SpawnEnemy", 0, SpeedSpawn);
     }
 
     
     void Update()
     {
-     //   SpeedEnemy += SpeedUp * Time.deltaTime;
+       SpeedEnemy += SpeedUp * Time.deltaTime;
     }
     public void SpawnEnemy()
     {

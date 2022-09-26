@@ -656,8 +656,8 @@ MonoBehaviour:
   Spawns:
   - {fileID: 67300939}
   - {fileID: 1285454815}
-  enemy1: {fileID: 2627286427332980176, guid: 02d064e0324dc54468fc845b722084cb, type: 3}
-  enemy2: {fileID: 2627286427332980176, guid: e49d0800b04b7594eb4d1eaee2ca20de, type: 3}
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
   SpeedSpawn: 2
   SpeedEnemy: 5
   SpeedUp: 0.5
